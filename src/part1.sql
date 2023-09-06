@@ -72,20 +72,8 @@ $$ LANGUAGE plpgsql;
 CALL csv_import('personal_data', '''/tmp/datasets/Personal_Data_Mini.tsv''', E'''\t''');
 CALL csv_import('cards', '''/tmp/datasets/Cards_Mini.tsv''', E'''\t''');
 CALL csv_import('transactions', '''/tmp/datasets/Transactions_Mini.tsv''', E'''\t''');
-CALL csv_import('groups_sku', '''/tmp/datasets/Groups_SKU.tsv''', E'''\t''');
+CALL csv_import('groups_sku', '''/tmp/datasets/Groups_SKU_Mini.tsv''', E'''\t''');
 CALL csv_import('sku', '''/tmp/datasets/SKU_Mini.tsv''', E'''\t''');
 CALL csv_import('checks', '''/tmp/datasets/Checks_Mini.tsv''', E'''\t''');
 CALL csv_import('stores', '''/tmp/datasets/Stores_Mini.tsv''', E'''\t''');
 CALL csv_import('date_of_analysis_formation', '''/tmp/datasets/Date_Of_Analysis_Formation.tsv''', E'''\t''');
-
-
--- FOR EXPORT
--- chmod -R 777 /tmp/datasets/
-CALL csv_export('personal_data', '''/tmp/datasets/Personal_Data_Mini_export.tsv''', E'''\t''');
-CALL csv_export('cards', '''/tmp/datasets/Cards_Mini_export.tsv''', E'''\t''');
-CALL csv_export('transactions', '''/tmp/datasets/Transactions_Mini_export.tsv''', E'''\t''');
-CALL csv_export('groups_sku', '''/tmp/datasets/Groups_SKU_Mini_export.tsv''', E'''\t''');
-CALL csv_export('sku', '''/tmp/datasets/SKU_Mini_export.tsv''', E'''\t''');
-CALL csv_export('checks', '''/tmp/datasets/Checks_Mini_export.tsv''', E'''\t''');
-CALL csv_export('stores', '''/tmp/datasets/Stores_Mini_export.tsv''', E'''\t''');
-CALL csv_export('date_of_analysis_formation', '''/tmp/datasets/Date_Of_Analysis_Formation_export.tsv''', E'''\t''');

@@ -138,17 +138,3 @@ BEGIN
     END IF;
 END;
 $$ LANGUAGE plpgsql;
-
--- tests
-SELECT *
-FROM calc_growth_offer(1, '2020-01-17'::date, '2022-08-21'::date, 16, 1, 1.4, 8, 5);
-
-SELECT *
-FROM calc_growth_offer(2, '2020-01-17'::date, '2022-08-21'::date, 100, 1.15, 3, 70, 30);
-
--- little funcs
-SELECT *
-FROM avg_check_by_date_range('2018-01-01'::date, '2022-02-12'::date);
-
-SELECT *
-FROM avg_check_by_num_transactions(5);

@@ -104,7 +104,3 @@ SELECT customer_id,
 FROM discount_margin_part
 WHERE allowable_margin_share * margin / sku_retail_price >= minimum_discount
 $$ LANGUAGE sql;
-
-
-SELECT * FROM fnc_personal_offers_aimed_at_cross_selling(5, 3, 0.5, 100, 30);
-SELECT * FROM fnc_personal_offers_aimed_at_cross_selling(12, 13, 0.7, 100, 30);

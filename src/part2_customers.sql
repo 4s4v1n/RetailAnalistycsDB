@@ -164,15 +164,3 @@ SELECT s.customer_id,
 FROM stat_segment s
 ORDER BY customer_id
 );
-
---  test cases
-SELECT *
-FROM view_customers;
-
-SELECT *
-FROM view_customers
-WHERE customer_segment = 1;
-
-SELECT *
-FROM view_customers
-WHERE customer_churn_segment = 'Medium';

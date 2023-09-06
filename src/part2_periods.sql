@@ -48,15 +48,3 @@ SELECT customer_id,
        group_min_discount(target_customer_id := customer_id, target_group_id := group_id) AS group_min_discount
 FROM customer_and_group_statistics
 );
-
---  test cases
-SELECT *
-FROM view_periods;
-
-SELECT *
-FROM view_periods
-WHERE group_id = 4;
-
-SELECT *
-FROM view_periods
-WHERE customer_id = 1;

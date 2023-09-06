@@ -18,15 +18,3 @@ FROM personal_data p
     JOIN stores s2 on s.sku_id = s2.sku_id AND t.transaction_store_id = s2.transaction_store_id
 WINDOW wnd AS (PARTITION BY p.customer_id, t.transaction_id, transaction_datetime, s.group_id)
 );
-
---  test cases
-SELECT *
-FROM view_purchase_history;
-
-SELECT *
-FROM view_purchase_history
-WHERE customer_id = 4 AND group_id = 1;
-
-SELECT *
-FROM view_purchase_history
-WHERE transaction_datetime BETWEEN '2022-07-17' AND '2022-07-22';

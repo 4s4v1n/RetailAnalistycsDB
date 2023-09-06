@@ -187,15 +187,3 @@ CREATE OR REPLACE VIEW view_groups AS (
     SELECT *
     FROM create_view_groups()
 );
-
--- test cases
-SELECT *
-FROM view_groups;
-
-SELECT *
-FROM view_groups
-WHERE customer_id = 1;
-
-SELECT *
-FROM view_groups
-WHERE group_margin IS NOT NULL;

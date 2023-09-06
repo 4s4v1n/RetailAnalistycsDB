@@ -72,14 +72,3 @@ BEGIN
         END LOOP;
 END;
 $$ LANGUAGE plpgsql;
-
-
-SELECT *
-FROM create_personal_offer(
-        '2022-08-18 00:00:00',
-        '2022-08-18 00:00:00',
-        1,
-        3,
-        70.0,
-        30.0
-    );
